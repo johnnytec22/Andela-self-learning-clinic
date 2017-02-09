@@ -1,34 +1,38 @@
 
 
 
-function findMinMax(numArray)
-{
-	var ls = new Array();
-	var min = numArray[0];
-	var max = numArray[0];
+exports.findMinMax = function(numArray){
+	    var ls = [];
+		var min = numArray[0];
+		var max = numArray[0];
 
-	for (var index in numArray)
-	{
-		if(numArray[index] < min)
+		for (var index in numArray)
 		{
-			min = numArray[index];
+			if(numArray[index] < min)
+			{
+				min = numArray[index];
+			}
+
+			if(numArray[index] > max)
+			{
+				max = numArray[index];
+			} 
 		}
 
-		if(numArray[index] > max)
+		if(min === max)
 		{
-			max = numArray[index];
-		} 
-	}
+			ls[0] = min;
+		}else{
+			ls[0] = min;
+			ls[1] = max;
+		}
 
-	if(min === max)
-	{
-		ls[0] = min;
-	}else{
-		ls[0] = min;
-		ls[1] = max;
+		return ls;
 	}
+        
 
-	return ls;
-}
+
+
+
 
 
