@@ -40,19 +40,19 @@ describe('Min-Max Numbers in a List: ', function () {
 
     });
 
-    
-
   });
+
+  describe('Array length not more than 2', function() {
+    it('should return an array whose length is NOT greater than 2', function() {
+      expect(myApp.findMinMax([2, 4, 3, 6, 7]).length).toBeLessThan(3);
+    });
+  })
 
   describe('Return the number in the list in a new list follows `[min]` when the number is the min and max number in that list', function () {
 
     it('should return [4] for [4, 4, 4, 4]', function () {
       expect(myApp.findMinMax([4, 4, 4, 4])).toEqual([4]);
     });
-
-
-
-
 
   });
 });
